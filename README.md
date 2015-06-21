@@ -8,7 +8,7 @@ To read data simply call the method `SoapEnvelop.FromStream` or `SoapEnvelope.Fr
 
 If you would like to see samples of use check out the `SoapEnvelopeTest` class. Below is a simple round trip sample that creates an envelope and then parses it back.
 
-``
+```
       SoapEnvelope envelope = new SoapEnvelope();
       envelope.Body = new[] { new XElement("BodyElement") };
       envelope.Headers = new[] { new XElement("HeaderElement") };
@@ -17,7 +17,7 @@ If you would like to see samples of use check out the `SoapEnvelopeTest` class. 
       doc.Save(stream);
       stream.Seek(0, SeekOrigin.Begin);
       SoapEnvelope otherEnvelope = SoapEnvelope.FromStream(stream);
-``
+```
 
 [Henrik Johnson](http://www.henrik.org)
 
